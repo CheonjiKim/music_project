@@ -29,10 +29,3 @@ class Music:
     
     def get_part3(self):
         return self.part3loc
-
-    
-t1 = Music("서른즈음에","김광석")
-
-t1.set_partlocs("1ban", "2ban", "3ban")
-
-print(t1.get_part2())

@@ -1,3 +1,5 @@
+import random
+
 def get_guess():
     guess = input("이 곡의 제목을 입력하세요: ")
     print()
@@ -13,7 +15,6 @@ def is_guess_correct(title, guess):
     else: return False
 
 
-    
 
 
 test1 = "a"
@@ -22,7 +23,5 @@ test3 = "안녕하세요 erETdf".lower()
 
 genres = ["Kpop", "발라드", "팝송", "힙합"]
 
-print_genres()
-# a = get_genre_num()
 
 
