@@ -1,7 +1,8 @@
 class Music:   
-    def __init__(self, title, author):
+    def __init__(self, title, author, rel_year):
         self.title = title
         self.author = author
+        self.rel_year = rel_year
         self.part1loc = ""
         self.part2loc = ""
         self.part3loc = ""
@@ -21,6 +22,9 @@ class Music:
 
     # 실제 main에서 사용할 메소드 세 개이다.
     # wav 파일의 경로를 반환한다.
+    def get_rel_year(self):
+        return self.rel_year
+
     def get_part1(self):
         return self.part1loc
 
