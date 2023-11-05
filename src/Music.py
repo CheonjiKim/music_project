@@ -1,4 +1,7 @@
-class Music:   
+class Music:
+    #self는 매개변수가 아니다.
+    #self는 Java의 this 키워드라고 생각해라.
+
     def __init__(self, title, author, rel_year):
         self.title = title
         self.author = author
@@ -13,15 +16,14 @@ class Music:
     def get_author(self):
         return self.author
     
+    
     def set_partlocs(self, p1, p2, p3):
+    # wav 파일의 경로를 입력하는 메소드이다.
         self.part1loc = p1
         self.part2loc = p2
         self.part3loc = p3
         return;
     
-
-    # 실제 main에서 사용할 메소드 세 개이다.
-    # wav 파일의 경로를 반환한다.
     def get_rel_year(self):
         return self.rel_year
 

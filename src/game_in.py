@@ -36,15 +36,15 @@ def ask_and_print_hint(song, chance):
         info = "이 곡의 가수:"
         hint = song.get_author()
         print("(힌트 제공 선택) 이 곡의 가수를 알려드리고자 합니다.")
-        
-    y_or_n = input("힌트가 필요하신가요? (Y / N): ")
-    y_or_n = y_or_n.replace(" ", "").strip().lower()
     
-    time.sleep(1)
-    if(y_or_n == "y"):
-        print(info, hint)
-    else:
-        print("힌트를 선택하지 않으셨습니다.")
+    if (chance == 2 or chance == 1):
+        y_or_n = input("힌트가 필요하신가요? (Y / N): ")
+        y_or_n = y_or_n.replace(" ", "").strip().lower()
+        time.sleep(1)
+        if(y_or_n == "y" or y_or_n == "ㅛ"):
+            print(info, hint)
+        else:
+            print("힌트를 선택하지 않으셨습니다.")
 
 
 def get_rel_year(song):
@@ -79,7 +79,7 @@ def play_round(track, point):
         
         if (correct): 
             print("정답을 맞혔습니다!")
-            print("해당 곡은", song.get_author(), "의", song.get_title(), "입니다.")
+            print(f"해당 곡은 '{song.get_author()}'의 '{song.get_title()}' 입니다.")
             return point
         else: # 정답을 맞히지 못한 경우
             point -= 1
@@ -97,7 +97,7 @@ def play_round(track, point):
                 print()
             else:
                 print("기회를 모두 소진하였습니다.")
-                print("해당 곡은", song.get_author(), "의", song.get_title(), "입니다.")
+                print(f"해당 곡은 '{song.get_author()}'의 '{song.get_title()}' 입니다.")
                 print()
                 end_lose_game()
         time.sleep(2)
@@ -110,5 +110,5 @@ def end_lose_game():
     
 def end_win_game():
     print("목표 점수에 도달하셨습니다.")
-    print("승리하셨습니다. 게임을 종료합니다.")
+    print("축하합니다. 승리하셨습니다! 게임을 종료합니다.")
     exit()

@@ -55,7 +55,7 @@ i_am.set_partlocs("src/music/i_am_001.wav","src/music/i_am_002.wav","src/music/i
 
 # Ballad
 to_tell_to_breakup.set_partlocs("src/music/to_tell_to_breakup_001.wav","src/music/to_tell_to_breakup_002.wav","src/music/to_tell_to_breakup_003.wav")
-things_that_i_thought_as_love.set_partlocs("things_that_i_thought_as_love_001.wav","things_that_i_thought_as_love_002.wav","things_that_i_thought_as_love_003.wav")
+things_that_i_thought_as_love.set_partlocs("src/music/things_that_i_thought_as_love_001.wav","src/music/things_that_i_thought_as_love_002.wav","src/music/things_that_i_thought_as_love_003.wav")
 all_your_moments.set_partlocs("src/music/all_your_moments_001.wav", "src/music/all_your_moments_002.wav", "src/music/all_your_moments_003.wav")
 
 # Pop
