@@ -34,7 +34,10 @@ def ask_and_print_hint(song, chance):
         print("(힌트 제공 선택) 이 곡의 발매년도를 알려드리고자 합니다.")
     if (chance == 1):
         info = "이 곡의 가수:"
-        hint = song.get_author()
+        hint = f"'{song.get_author()}'"
+        print("(경고) 이번 기회에 제목을 맞히지 못하면 패배합니다!")   
+        time.sleep(1)     
+        print()
         print("(힌트 제공 선택) 이 곡의 가수를 알려드리고자 합니다.")
     
     if (chance == 2 or chance == 1):
@@ -85,7 +88,7 @@ def play_round(track, point):
             point -= 1
             chance -= 1
             i += 1
-            print("정답이 아닙니다. 기회가 하나 차감됩니다.")
+            print("정답을 맞히지 못했습니다. 기회가 하나 차감됩니다.")
             print("남은 기회 수:", chance)
             time.sleep(1)
             print()

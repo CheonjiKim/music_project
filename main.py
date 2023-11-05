@@ -8,33 +8,35 @@ all_tracks = [korpop_track, ballad_track, pop_track, hiphop_track]
 points_for_genres = [4, 5, 6, 4] # 기본값은 [4, 5, 6, 4]이다.
 
 
-# song = take_a_randomsong_from_track(track)
-# part = [song.get_part1(), song.get_part2(), song.get_part3()]
-# 배열에서 노래 하나를 선택하고, 그 노래를 배열에서 제거한다.
-
-
-
-
-score = 0 # 이게 10점에 도달해야 한다.
-time.sleep(2)
+score = 0 # 이게 10점에 도달하면 승리한다.
+time.sleep(1)
 print("=========================")
 print("지금부터 게임을 시작합니다.")
 print("=========================")
-time.sleep(2)
+time.sleep(1)
 print()
 
 # 이 while문에서 게임이 진행된다.
+
+round_counter = 1
 while(score < 10):
     print_genres()
     genre_idx = get_genre_idx()
     track = all_tracks[genre_idx]
     default_point = points_for_genres[genre_idx]
     
-    gained_point = play_round(track, default_point)
+    time.sleep(1)
+    print()
+    print(f"======== # {round_counter}번째 라운드 시작 ========")
+    print()
+    round_counter += 1
+    
+    gained_point = play_round(track, default_point)    
     if (gained_point == "null"):
         # 해당 트랙의 노래를 모두 소진한 경우
         # while문 시작으로 안내하여 다른 곡을 선택하도록 한다.
         continue
+    
     score += gained_point
     time.sleep(2)
     print("획득한 점수:", score)
