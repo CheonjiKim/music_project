@@ -1,6 +1,5 @@
 import time
-from src.game_out import *
-from src.game_in import *
+from src.game_functions import *
 from src.music_data import korpop_track, ballad_track, pop_track, hiphop_track
 
 # 장르의 순서는 다음과 같다: 
