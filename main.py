@@ -38,7 +38,9 @@ while(score < 10):
     
     score += gained_point
     time.sleep(2)
-    print("획득한 점수:", score)
+    print()
+    print("획득 점수:", gained_point)
+    print("총점:", score)
     
 
 # 승패 판정
